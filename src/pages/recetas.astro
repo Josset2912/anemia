@@ -1,0 +1,259 @@
+---
+// src/pages/recetas.astro
+import Layout from "../layout/Layout.astro";
+import recetasData from "../data/recetas.json";
+
+// Organizamos las recetas por grupos de edad
+const gruposEdad = {
+  "6 a 8 meses": recetasData.recetas.filter((r) => r.edad === "6-8"),
+  "9 a 11 meses": recetasData.recetas.filter((r) => r.edad === "9-11"),
+  "12 a 23 meses": recetasData.recetas.filter((r) => r.edad === "12-23"),
+};
+---
+
+<Layout title="Recetas Contra la Anemia Infantil">
+  <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <!-- Hero Section -->
+    <section
+      class="text-center mb-12 bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8"
+    >
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Recetas para Prevenir la Anemia Infantil
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Alimentos ricos en hierro adaptados a cada etapa de desarrollo de tu
+        bebé
+      </p>
+      <div class="mt-6 flex justify-center gap-4">
+        {
+          Object.keys(gruposEdad).map((edad) => (
+            <a
+              href={`#${edad.replace(/\s+/g, "-")}`}
+              class="px-5 py-2 rounded-full text-sm font-medium bg-white text-primary-600 
+                   border border-primary-200 hover:bg-primary-100 transition-colors shadow-sm"
+            >
+              {edad}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Sección por grupos de edad -->
+    {
+      Object.entries(gruposEdad).map(([edad, recetas]) => (
+        <section id={edad.replace(/\s+/g, "-")} class="mb-16 scroll-mt-20">
+          <div class="flex items-center mb-8">
+            <div class="mr-4 p-3 rounded-lg bg-primary-100 text-primary-800">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900">
+                RECETAS PARA PREVENIR LA ANEMIA EN NIÑOS DE {edad.toUpperCase()}
+              </h2>
+              <p class="text-gray-500">
+                {edad === "6 a 8 meses" &&
+                  "Primeras comidas - purés suaves y fáciles de digerir"}
+                {edad === "9 a 11 meses" &&
+                  "Texturas más gruesas - estimulación de la masticación"}
+                {edad === "12 a 23 meses" &&
+                  "Alimentos familiares - dieta variada y nutritiva"}
+              </p>
+            </div>
+          </div>
+
+          {recetas.length > 0 ? (
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {recetas.map((receta) => (
+                <article
+                  class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow 
+                            border border-gray-100 hover:border-primary-100 flex flex-col h-full"
+                >
+                  {/* Imagen */}
+                  <div class="relative aspect-[5/3] overflow-hidden">
+                    <img
+                      src={receta.imagen}
+                      alt={receta.titulo}
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                    <span class="absolute top-3 right-3 bg-white/90 text-gray-800 text-xs font-medium px-2.5 py-1 rounded-full shadow-sm">
+                      ⏱️ {receta.tiempo}
+                    </span>
+                  </div>
+
+                  {/* Contenido */}
+                  <div class="p-5 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-3">
+                      <h3 class="text-lg font-bold text-gray-900">
+                        {receta.titulo}
+                      </h3>
+                      <span class="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded-full">
+                        🍽️ {receta.porciones}
+                      </span>
+                    </div>
+
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2 flex-grow">
+                      {receta.descripcion}
+                    </p>
+
+                    {/* Nutrientes destacados */}
+                    <div class="mb-4">
+                      <h4 class="text-xs font-semibold text-gray-500 mb-1">
+                        NUTRIENTES PRINCIPALES
+                      </h4>
+                      <div class="flex flex-wrap gap-2">
+                        {receta.nutrientes?.map((nutriente) => (
+                          <span class="text-xs px-2 py-1 rounded-full bg-green-50 text-green-700">
+                            {nutriente}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <a
+                      href={`/recetas/${receta.id}`}
+                      class="mt-auto text-sm font-medium inline-flex items-center justify-center
+                          text-primary-600 hover:text-primary-800 transition-colors
+                          group hover:underline px-4 py-2 border border-primary-100 rounded-lg
+                          hover:bg-primary-50 w-full text-center"
+                    >
+                      Ver receta completa
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div class="bg-blue-50 rounded-xl p-8 text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto text-blue-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <h3 class="text-lg font-medium text-gray-900 mt-4">
+                Próximamente más recetas
+              </h3>
+              <p class="text-gray-500 mt-2">
+                Estamos trabajando en nuevas recetas para este grupo de edad.
+              </p>
+            </div>
+          )}
+        </section>
+      ))
+    }
+
+    <!-- Sección de consejos -->
+    <section class="mt-16 bg-gray-50 rounded-2xl p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">
+        Consejos para Prevenir la Anemia
+      </h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white p-6 rounded-lg shadow-xs border border-gray-100">
+          <div class="text-primary-600 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Hierro Hemínico</h3>
+          <p class="text-gray-600 text-sm">
+            Incluye carnes rojas, hígado y pescado en la dieta de tu hijo (a
+            partir de los 6 meses).
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xs border border-gray-100">
+          <div class="text-primary-600 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Vitamina C</h3>
+          <p class="text-gray-600 text-sm">
+            Combina alimentos ricos en hierro con frutas cítricas para mejorar
+            la absorción.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xs border border-gray-100">
+          <div class="text-primary-600 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Control Médico</h3>
+          <p class="text-gray-600 text-sm">
+            Realiza controles periódicos de hemoglobina según lo indique tu
+            pediatra.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

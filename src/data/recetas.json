@@ -1,0 +1,437 @@
+{
+  "recetas": [
+    {
+      "id": "pure-carnes-vegetales",
+      "titulo": "Purecito Nutritivo",
+      "descripcion": "Primera comida rica en hierro hemínico para bebés de 6 meses.",
+      "imagen": "/src/images/pure-carnes.jpg",
+      "categoria": "Carnes",
+      "edad": "6-8",
+      "tiempo": "30 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Hierro hemínico", "Zinc", "Vitamina B12"],
+      "nutriente": {
+        "Energía": 110,
+        "Proteína": 8,
+        "Hierro": 15,
+        "Retinol": 6,
+        "Zinc": 2
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "Una cucharada de sémola",
+        "1 hoja de espinaca",
+        "½ cucharadita de aceite vegetal",
+        "1 rodaja delgada de zanahoria",
+        "2 cucharadas de bazo",
+        "12 cucharadas de caldo"
+      ],
+      "preparacion": [
+        "Con ayuda de una cuchara vaciar el contenido del bazo y una vez obtenida la pulpa, sancocharla.",
+        "Aparte, sancochar la zanahoria y la  espinaca, luego aplastarlos con la ayuda de un tenedor. Guardar el caldo.",
+        "Disolver la sémola en el caldo y luego poner a cocinar.",
+        "Agregar la zanahoria y la espinaca aplastadas.",
+        "Dar vueltas hasta que cocine y toma una consistencia espesa y servir."
+      ],
+      "notas": "Para bebés que recién inician alimentación complementaria. Textura muy suave."
+    },
+    {
+      "id": "lentejas-espinacas",
+      "titulo": "Suavecito Infantil",
+      "descripcion": "Combinación perfecta de hierro vegetal y vitamina C para mejor absorción.",
+      "imagen": "/src/images/lentejas-espinacas.jpg",
+      "categoria": "Legumbres",
+      "edad": "6-8",
+      "tiempo": "45 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Hierro no hemínico", "Vitamina C", "Fibra"],
+      "nutriente": {
+        "calorias": 200,
+        "proteinas": 12,
+        "carbohidratos": 30,
+        "grasas": 5
+      },
+      "porciones": 4,
+      "ingredientes": [
+        "1 unidad chica de papa amarilla",
+        "1 unidad de higado de pollo",
+        "1 trozo de zapallo",
+        "1 cucharadita de aceite vegetal",
+        "¼ de taza de caldo"
+      ],
+      "preparacion": [
+        "Zancochar la papa amarilla y el higado de pollo y guardar el caldo.",
+        "Aplastar con ayuda de un tenedor la papa amarilla sancochada, el higado, agregar el zapallo aplastado.",
+        "Mezclar bien hasta obtener una consistencia espesa."
+      ],
+      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro."
+    },
+    {
+      "id": "lentejas-espinacas",
+      "titulo": "Especito de bazo con camote",
+      "descripcion": "Combinación perfecta de hierro vegetal y vitamina C para mejor absorción.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Legumbres",
+      "edad": "6-8",
+      "tiempo": "45 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Hierro no hemínico", "Vitamina C", "Fibra"],
+      "nutriente": {
+        "calorias": 200,
+        "proteinas": 12,
+        "carbohidratos": 30,
+        "grasas": 5
+      },
+      "porciones": 4,
+      "ingredientes": [
+        "Una rodaja grusa de camote",
+        "2 cucharadas de bazo",
+        "⅛ unidad pequeña de zanahoria",
+        "½ cucharadita de aceite vegetal",
+        "2 cucharadas de caldo"
+      ],
+      "preparacion": [
+        "Con ayuda de una cuchara vaciar el contenido del bazo y una vez obtenida la pulpa sancocharla y reservar el caldo.",
+        "Aparte, sancochar la zanahoria y el camote sin cascara.",
+        "Aplastar con ayuda de un tenedor el camote sancochado y la zanahoria sancochada",
+        "Mezclar todos los ingredientes: el bazo, la zanahoria, el camote, el caldo y el aceite hasta tener una consistencia espesa y servir."
+      ],
+      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro."
+    },
+    {
+      "id": "lentejas-espinacas",
+      "titulo": "Delicia de Hígado",
+      "descripcion": "Combinación perfecta de hierro vegetal y vitamina C para mejor absorción.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Legumbres",
+      "edad": "6-8",
+      "tiempo": "45 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Hierro no hemínico", "Vitamina C", "Fibra"],
+      "nutriente": {
+        "calorias": 200,
+        "proteinas": 12,
+        "carbohidratos": 30,
+        "grasas": 5
+      },
+      "porciones": 4,
+      "ingredientes": [
+        "1 unidad chica de papa amarilla",
+        "1 unidad de higado de pollo",
+        "1 trozo de zapallo",
+        "1 cucharadita de aceite vegetal",
+        "¼ de taza de caldo"
+      ],
+      "preparacion": [
+        "Zancochar la papa amarilla y el higado de pollo y guardar el caldo.",
+        "Aplastar con ayuda de un tenedor la papa amarilla sancochada, el higado, agregar el zapallo aplastado",
+        "Mezclar bien hasta obtener una consistencia espesa."
+      ],
+      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro."
+    },
+
+    {
+      "id": "huevo-zanahoria",
+      "titulo": "Lomita de Sangrecita",
+      "descripcion": "Excelente fuente de proteínas y vitamina A para bebés mayores.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Carnes",
+      "edad": "9-11",
+      "tiempo": "20 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Proteínas completas", "Vitamina A", "Colina"],
+      "nutriente": {
+        "calorias": 180,
+        "proteinas": 10,
+        "carbohidratos": 8,
+        "grasas": 12
+      },
+      "porciones": 1,
+      "ingredientes": [
+        "2 cucharadas de sangrecita",
+        "1 cucharada de tomate",
+        "1 cucharada de cebolla",
+        "1 cucharada de papa blanca",
+        "1 cucharadita de aceite vegetal",
+        "2 hojas de perejil",
+        "1/8 taza de caldo",
+        "Una pizca de sal yodada"
+      ],
+      "preparacion": [
+        "Sancochar la sangrecita con una pizca de sal y reservar el caldo",
+        "Preparar el aderezo con la cebolla, el tomate ambos picados en cuadraditos, el aceite, agregar la papa picada en cuadraditos y el caldo.",
+        "Cuando este cocida la papa, adicionar la sangrecita picada en cuadritos y el perejil picado finamente.",
+        "Mezclar todo y dar un hervor. Servir acompañado de arroz graneado."
+      ],
+      "notas": "Asegurarse que el huevo esté bien cocido. Introducir después de confirmar que no hay alergia."
+    },
+
+    {
+      "id": "albondigas-hierro",
+      "titulo": "Tallarines verdes con hígado de pollo",
+      "descripcion": "Deliciosa combinación de hierro y fibra para una comida completa.",
+      "imagen": "/images/albondigas.jpg",
+      "categoria": "Carnes",
+      "edad": "9-11",
+      "tiempo": "40 minutos",
+      "nivel": "Intermedio",
+      "nutrientes": ["Hierro hemínico", "Proteínas", "Vitamina K"],
+      "nutriente": {
+        "calorias": 250,
+        "proteinas": 15,
+        "carbohidratos": 10,
+        "grasas": 18
+      },
+      "porciones": 3,
+      "ingredientes": [
+        "Un puñado de fideo cabello de ángel",
+        "2 cucharadas de hígado de pollo",
+        "6 hojas de espinaca",
+        "1 cucharadita de aceite vegetal",
+        "1 diente de ajo",
+        "4 cucharadas de leche materna",
+        "2 cucharadas de agua",
+        "1/8 taza de caldo",
+        "Una pizca de sal yodada"
+      ],
+      "preparacion": [
+        "Sancochar los fideos con una pizca de sal yodada.",
+        "Lavar y licuar la espinaca con el agua.",
+        "Aparte, en una olla freír el ajo molido, el aceite vegetal, el hígado picado en cuadritos, la sal, la espinaca licuada y cocinar. Al final adicionar la leche.",
+        "Mezclar los fideos sancochados con el aderezo anterior y servir"
+      ],
+      "notas": "Pueden congelarse las albóndigas ya cocidas para comidas rápidas."
+    },
+
+    {
+      "id": "batido-frutas-hierro",
+      "titulo": "Pure de habas con sangrecita al jugo",
+      "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Bebidas",
+      "edad": "9-11",
+      "tiempo": "10 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Vitamina C", "Fibra", "Antioxidantes"],
+      "nutriente": {
+        "calorias": 120,
+        "proteinas": 2,
+        "carbohidratos": 28,
+        "grasas": 0.5
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "1 puñado de habas frescas sin cascara",
+        "4 cucharadas de diente de ajo",
+        "1/2 cucharadita de aceite vegetal",
+        "1/2 taza de agua",
+        "2 cucharadas de sangrecita",
+        "1 cucharada de cebolla",
+        "1 cucharada de tomate",
+        "unidad pequeña de pimiento",
+        "1 cucharada de arroz graneado",
+        "1 pizaca de sal yodada"
+      ],
+      "preparacion": [
+        "Para preparar el puré, freír el ajo molido con el aceite vegetal, agregar las habas partidas por la mitad, la sal y la mitad de agua. ",
+        "Cuando estén cocidas aplastar con ayuda de un tenedor hasta que tome una consistencia homogénea. Adicionar la leche y mezclar todo.",
+        "Para preparar la sangrecita, freír la cebolla y el tomate ambos picados en cuadraditos con el aceite.",
+        "Agregar el pimiento licuado, la sangrecita picada en cuadraditos y el resto de agua. Dejar cocinar.",
+        "Servir el puré con la sangrecita al jugo acompañado de arroz."
+      ],
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+    },
+
+    {
+      "id": "batido-frutas-hierro",
+      "titulo": "Seco de hígado de pollo",
+      "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Bebidas",
+      "edad": "9-11",
+      "tiempo": "10 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Vitamina C", "Fibra", "Antioxidantes"],
+      "nutriente": {
+        "calorias": 120,
+        "proteinas": 2,
+        "carbohidratos": 28,
+        "grasas": 0.5
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "1 cucharada de arvejas frecas sancochadas.",
+        "1 cucharada de zanahoria",
+        "2 cucharadas de arroz graneado.",
+        "2 cucharadas de hígado de pollo",
+        "2 cucharada de papa.",
+        "1 cucharadita de aceite vegetal. ",
+        "4 hojas de espinaca",
+        "1 diente de ajo",
+        "1 pizaca de sal yodada",
+        "1/8 taza de agua"
+      ],
+      "preparacion": [
+        "Para preparar el seco, freir el ajo molido con el aceite, agregar la espinaca licuada con el agua, la zanahoria picada en cuadraditos, las arvejas sancochadas y la papa picada en cuadraditos.  ",
+        "Cuando este todo cocido agregar la pizca de sal y el hígado picado en cuadritos y cocinar.",
+        "Servir el seco de hígado acompañado con el arroz graneado."
+      ],
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+    },
+
+    {
+      "id": "batido-frutas-hierro",
+      "titulo": "Locro de zapallo con hígado de res",
+      "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Bebidas",
+      "edad": "12-23",
+      "tiempo": "10 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Vitamina C", "Fibra", "Antioxidantes"],
+      "nutriente": {
+        "calorias": 120,
+        "proteinas": 2,
+        "carbohidratos": 28,
+        "grasas": 0.5
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "1 tajada delgada de zapallo.",
+        "1 cucharada de choclo desgranado.",
+        "1 cucharada de cebolla",
+        "1 diente de ajo.",
+        "1 cucharada de arveja fresca",
+        "⅛ taza de agua.",
+        "1 cucharadita de aceite vegetal. ",
+        "1⁄4 tajada delgada de queso fresco.",
+        "4 cucharadas de leche.",
+        "2 hojas de huacatay. ",
+        "1⁄2 filete de hígado de res.",
+        "2 hojas de espinaca."
+      ],
+      "preparacion": [
+        "Para preparar el locro, freír el ajo molido con el aceite, la cebolla picada en cuadraditos, las arvejas y la mitad de agua.",
+        " Cuando estén cocidas las arvejas agregar el choclo, el huacatay picado en finamente y dejar que hierva.",
+        " Cuando este todo cocido agregar el queso picado en cuadraditos, la leche y la sal. Mezclar y dar un hervor.",
+        " Para preparar el hígado al jugo, lavar y sazonar el hígado con la sal, la espinaca licuada y ponerlo a cocinar con el resto de agua.",
+        "Servir el locro de zapallo con el hígado de res al jugo acompañado de arroz graneado."
+      ],
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+    },
+
+    {
+      "id": "batido-frutas-hierro",
+      "titulo": "Trigo a la jardinera",
+      "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Bebidas",
+      "edad": "12-23",
+      "tiempo": "10 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Vitamina C", "Fibra", "Antioxidantes"],
+      "nutriente": {
+        "calorias": 120,
+        "proteinas": 2,
+        "carbohidratos": 28,
+        "grasas": 0.5
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "1 unidad de hígado de pollo.",
+        "5 cucharadas de trigo sancochado.",
+        "1 cucharada de zanahoria.",
+        "1 cucharada de arvejas frescas.",
+        "1 cucharada de choclo desgranado.",
+        "unidad pequeña de pimiento.",
+        "1 cucharadita de aceite vegetal",
+        "1 diente de ajo.",
+        "Una pizaca de sal yodada.",
+        "⅛ taza de agua"
+      ],
+      "preparacion": [
+        "Para preparar el trigo a la jardinera, freír el ajo molido en el aceite, agregar la zanahoria picada en cuadritos, las arveja sin cáscara, el choclo desgranado, la mitad de agua, la sal yodada y el trigo sancochado.",
+
+        " Mezclar todo y cocinar.",
+        " Para preparar el hígado a la plancha, lavar y sazonar el hígado con la sal y el pimiento licuado.",
+        "Poner en una sartén el hígado sazonado con el resto de agua y cocinarlo hasta que se consuma el agua dándole vueltas por ambos lados.",
+        "Servir el trigo a la jardinera con hígado de pollo a la plancha."
+      ],
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+    },
+
+    {
+      "id": "batido-frutas-hierro",
+      "titulo": "Tortilla brillante",
+      "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Bebidas",
+      "edad": "12-23",
+      "tiempo": "10 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Vitamina C", "Fibra", "Antioxidantes"],
+      "nutriente": {
+        "calorias": 120,
+        "proteinas": 2,
+        "carbohidratos": 28,
+        "grasas": 0.5
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "1 unidad de hígado de pollo.",
+        "1 trozo pequeño de zapallo.",
+        "1 unidad de huevo de gallina.",
+        "2 cucharadas de harina de trigo. ",
+        "2 cucharadas de aceite vegetal. ",
+        "1 pizaca de sal yodada.",
+        "4 cucharadas de arroz graneado."
+      ],
+      "preparacion": [
+        "Sancochar el zapallo y el hígado de pollo. ",
+        "Aplastar el zapallo. Picar el hígado sanco- chado en cuadraditos.",
+        "Aparte batir el huevo, la harina, el zapallo y la pizca de sal.",
+        "Agregar a la mezcla anterior, el hígado en trocitos. Mezclar todo.",
+        "Freír en aceite bien caliente.",
+        "Servir acompañado con arroz graneado."
+      ],
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+    },
+
+    {
+      "id": "batido-frutas-hierro",
+      "titulo": "Hígado en salsa verde",
+      "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
+      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "categoria": "Bebidas",
+      "edad": "12-23",
+      "tiempo": "10 minutos",
+      "nivel": "Fácil",
+      "nutrientes": ["Vitamina C", "Fibra", "Antioxidantes"],
+      "nutriente": {
+        "calorias": 120,
+        "proteinas": 2,
+        "carbohidratos": 28,
+        "grasas": 0.5
+      },
+      "porciones": 2,
+      "ingredientes": [
+        "2 unidades de hígado de pollo.",
+        "4 hojas de espinaca",
+        "1 puñado de arveja fresca.",
+        "Ajo y pizca de sal yodada.",
+        "4 cucharadas de aceite vegetal.",
+        "1 unidad chica de papa amarilla",
+        "4 cucharadas de arroz graneado."
+      ],
+      "preparacion": [
+        " Hacer una mezcla con el ajo, el aceite y una pizca de sal. ",
+        "Macerar los hígados en la mezcla anterior por 30 minutos. ",
+        "Freir los hígados en aceite bien caliente.",
+        "Sancochar aparte las arvejas y licuar o aplastar la espinaca. ",
+        "Colocar los hígados, las arvejas, la espinaca y la mezcla del macerado y dejar dar un hervor por unos minutos.",
+        "Servir acompañado de arroz graneado y papa sancochada en rodajas."
+      ],
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+    }
+  ]
+}

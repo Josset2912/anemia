@@ -1,0 +1,80 @@
+---
+// src/pages/importancia.astro
+import Layout from '../layout/Layout.astro';
+---
+<Layout title="Importancia de Combatir la Anemia">
+  <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl font-bold text-gray-900 sm:text-4xl">¿Por qué es importante combatir la anemia?</h1>
+      <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        Conoce los efectos de la anemia en el desarrollo infantil y cómo prevenirla
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- Sección de impacto -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-primary-dark mb-4">Impacto en la Salud</h2>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <div class="flex-shrink-0 h-6 w-6 text-primary-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <p class="ml-3 text-gray-700">Disminuye la capacidad cognitiva y el rendimiento escolar</p>
+          </li>
+          <li class="flex items-start">
+            <div class="flex-shrink-0 h-6 w-6 text-primary-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <p class="ml-3 text-gray-700">Afecta el desarrollo físico y motor</p>
+          </li>
+          <li class="flex items-start">
+            <div class="flex-shrink-0 h-6 w-6 text-primary-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <p class="ml-3 text-gray-700">Debilita el sistema inmunológico</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sección de prevención -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-primary-dark mb-4">Cómo Prevenirla</h2>
+        <div class="prose prose-indigo max-w-none">
+          <p>La prevención de la anemia se basa en tres pilares fundamentales:</p>
+          <ol>
+            <li>Consumo de alimentos ricos en hierro (carnes rojas, lentejas, espinacas)</li>
+            <li>Suplementación con hierro según indicación médica</li>
+            <li>Control periódico de hemoglobina en niños y embarazadas</li>
+          </ol>
+          <p class="mt-4 font-medium">La detección temprana es clave para evitar consecuencias a largo plazo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="mt-16 bg-blue-50 rounded-xl p-8">
+      <h2 class="text-2xl font-bold text-center text-gray-900 mb-8">Cifras Alarmantes en el Perú</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <p class="text-4xl font-bold text-primary-dark">40.1%</p>
+          <p class="text-gray-600 mt-2">de niños entre 6 y 36 meses con anemia (ENDES 2022)</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <p class="text-4xl font-bold text-primary-dark">46.6%</p>
+          <p class="text-gray-600 mt-2">en zonas rurales vs 37.6% en urbanas</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <p class="text-4xl font-bold text-primary-dark">2.5x</p>
+          <p class="text-gray-600 mt-2">más probabilidades de desarrollar anemia en hogares pobres</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
