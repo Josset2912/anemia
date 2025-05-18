@@ -3,123 +3,104 @@
 import Layout from "../layout/Layout.astro";
 ---
 
-<Layout title="Home - FoodRecipes">
-  <!-- Hero Section -->
+<Layout title="NutriKids - Combatiendo la Anemia Infantil">
+  <!-- Hero Section Renovada -->
   <section
-    class="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gradient-to-r from-blue-900 to-blue-700 text-white"
+    class="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-amber-400 to-orange-400 overflow-hidden"
   >
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl 2xl:max-w-6xl">
+    <!-- Patrón decorativo -->
+    <div class="absolute inset-0 opacity-10">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+')]"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center">
-        <!-- Badge superior -->
+        <!-- Badge superior mejorado -->
         <div
-          class="inline-flex bg-white/10 backdrop-blur-sm rounded-full px-4 py-1 sm:px-5 sm:py-2 mb-4 sm:mb-6"
+          class="inline-flex bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 mb-6 shadow-md"
         >
-          <span
-            class="text-blue-100 font-semibold uppercase tracking-wider text-xs sm:text-sm"
-            >Salud Infantil</span
+          <span class="text-white font-bold uppercase tracking-wider text-sm"
+            >¡Juntos contra la anemia!</span
           >
         </div>
 
-        <!-- Título principal -->
+        <!-- Título principal con efecto -->
         <h1
-          class="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-5 sm:mb-6"
+          class="text-4xl font-bold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight"
         >
-          <span class="block">Combatiendo la Anemia Infantil</span>
-          <span class="text-blue-200">en el Perú</span>
+          <span class="block">Nutrición Saludable</span>
+          <span class="text-orange-100 drop-shadow-md">para Niños Felices</span>
         </h1>
 
-        <!-- Contenedor de texto principal -->
+        <!-- Contenedor de texto con ilustración -->
         <div
-          class="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-white/20 mx-auto max-w-4xl"
+          class="bg-white/20 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-2 border-white/30 max-w-4xl mx-auto shadow-lg"
         >
-          <p
-            class="text-base sm:text-lg md:text-xl leading-relaxed sm:leading-relaxed md:leading-relaxed mb-4 sm:mb-6"
-          >
-            Información <strong class="font-semibold"
-              >confiable y validada</strong
-            > según las normas técnicas del
-            <span class="text-yellow-300 font-medium"
-              >Ministerio de Salud del Perú</span
-            >, para la prevención y tratamiento de la anemia en niños y niñas.
-          </p>
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3">
+              <p class="text-lg sm:text-xl text-white mb-6">
+                Aprende a <strong class="font-bold text-amber-200"
+                  >prevenir y combatir</strong
+                > la anemia infantil con recetas deliciosas y consejos avalados por
+                el <span class="font-semibold text-white underline"
+                  >Ministerio de Salud del Perú</span
+                >.
+              </p>
 
-          <!-- Grid de características -->
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-left max-w-3xl mx-auto"
-          >
-            <!-- Característica 1 -->
-            <div class="flex items-start">
-              <div
-                class="bg-yellow-400 text-blue-900 rounded-full p-1 sm:p-2 mr-3 sm:mr-4 flex-shrink-0"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-yellow-300 text-sm sm:text-base mb-1">
-                  Orientación Clara
-                </h3>
-                <p class="text-blue-100 text-xs sm:text-sm">
-                  Consejos prácticos para aplicar en el hogar
-                </p>
+              <!-- Grid de características mejorado -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white/10 rounded-lg p-4 flex items-start">
+                  <span class="text-2xl mr-3">🍎</span>
+                  <div>
+                    <h3
+                      class="font-bold text-amber-200 text-sm sm:text-base mb-1"
+                    >
+                      Alimentos ricos en hierro
+                    </h3>
+                    <p class="text-white text-xs sm:text-sm">
+                      Descubre las mejores fuentes nutricionales
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-white/10 rounded-lg p-4 flex items-start">
+                  <span class="text-2xl mr-3">👩‍🍳</span>
+                  <div>
+                    <h3
+                      class="font-bold text-amber-200 text-sm sm:text-base mb-1"
+                    >
+                      Recetas prácticas
+                    </h3>
+                    <p class="text-white text-xs sm:text-sm">
+                      Fáciles de preparar en casa
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <!-- Característica 2 -->
-            <div class="flex items-start">
+            <div class="hidden md:block md:w-1/3">
               <div
-                class="bg-yellow-400 text-blue-900 rounded-full p-1 sm:p-2 mr-3 sm:mr-4 flex-shrink-0"
+                class="bg-white/20 rounded-full p-4 mx-auto w-40 h-40 flex items-center justify-center border-4 border-white/30"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-yellow-300 text-sm sm:text-base mb-1">
-                  Basado en Evidencia
-                </h3>
-                <p class="text-blue-100 text-xs sm:text-sm">
-                  Protocolos médicos actualizados
-                </p>
+                <span class="text-6xl">👶</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Botón CTA -->
-        {
-          /*
-        <div class="mt-8 sm:mt-10">
+        <!-- Botón CTA destacado -->
+        <div class="mt-10">
           <a
             href="#alimentacion"
-            class="inline-flex items-center bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
+            class="inline-flex items-center bg-white hover:bg-gray-100 text-orange-600 font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl text-lg"
           >
-            Conoce más
+            Comenzar ahora
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 sm:h-5 sm:w-5 ml-1 sm:ml-2"
+              class="h-5 w-5 ml-2"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -130,128 +111,133 @@ import Layout from "../layout/Layout.astro";
             </svg>
           </a>
         </div>
-        */
-        }
       </div>
     </div>
   </section>
 
-  <!-- Sección de Alimentación Responsable -->
-  <section id="alimentacion" class="py-16 sm:py-20 bg-white">
+  <!-- Sección de Alimentación Responsable - Diseño Renovado -->
+  <section id="alimentacion" class="py-16 sm:py-24 bg-amber-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
-          Alimentación Responsable
+          <span class="text-orange-500">Alimentación</span> Saludable para Niños
         </h2>
         <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-          Clave para prevenir la anemia y establecer hábitos saludables
+          Descubre cómo establecer hábitos nutricionales que prevengan la anemia
         </p>
       </div>
 
-      <div class="bg-blue-50 rounded-2xl overflow-hidden shadow-xl">
-        <div class="grid md:grid-cols-2">
-          <!-- Imagen -->
-          {
-            /*
-              <d class="hidden md:block bg-blue-100">
-            {
-              /*
-             <img
-              src="/images/ninos-comiendo.jpg"
-              alt="Niños comiendo saludable"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
-            */
-          }
-        </div>
-
-        <!-- Contenido -->
-        <div class="p-8 sm:p-10">
-          <p class="text-lg text-gray-700 mb-6">
-            Representa una ventana de oportunidad para que los niños y niñas en
-            desarrollo aprendan a aceptar y adquieran el gusto por los alimentos
-            naturales y establezcan patrones de alimentación saludables a largo
-            plazo, previniendo problemas nutricionales como la desnutrición y la
-            anemia.
-          </p>
-
-          <div class="bg-white rounded-lg p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-primary-dark mb-4">
-              La alimentación responsable se basa en 3 pasos clave:
-            </h3>
-
-            <ol class="space-y-6">
-              <li class="flex">
-                <div
-                  class="flex-shrink-0 bg-blue-100 text-blue-800 rounded-full h-8 w-8 flex items-center justify-center mr-4 font-bold"
-                >
-                  1
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900">Señales del niño(a)</h4>
-                  <p class="text-gray-600 mt-1">
-                    Muestra señales de hambre y saciedad a través de acciones
-                    motoras, expresiones faciales y vocalización.
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex">
-                <div
-                  class="flex-shrink-0 bg-blue-100 text-blue-800 rounded-full h-8 w-8 flex items-center justify-center mr-4 font-bold"
-                >
-                  2
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900">
-                    Respuesta del cuidador
-                  </h4>
-                  <p class="text-gray-600 mt-1">
-                    Los padres/cuidadores reconocen las señales y responden
-                    oportunamente de manera que apoye emocionalmente y sea
-                    adecuada para sus necesidades y nivel de desarrollo.
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex">
-                <div
-                  class="flex-shrink-0 bg-blue-100 text-blue-800 rounded-full h-8 w-8 flex items-center justify-center mr-4 font-bold"
-                >
-                  3
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900">
-                    Establecimiento de hábitos
-                  </h4>
-                  <p class="text-gray-600 mt-1">
-                    El niño(a) se acostumbra a una respuesta consistente a sus
-                    necesidades que comunica.
-                  </p>
-                </div>
-              </li>
-            </ol>
+      <div class="bg-white rounded-3xl overflow-hidden shadow-2xl">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <!-- Imagen decorativa -->
+          <div
+            class="hidden lg:block bg-gradient-to-br from-amber-200 to-orange-200 p-10 flex items-center justify-center"
+          >
+            <div class="text-center">
+              <span class="text-8xl block mb-6">🥗</span>
+              <h3 class="text-2xl font-bold text-orange-700">
+                Nutrición Infantil
+              </h3>
+              <p class="text-orange-600 mt-2">
+                La base para un desarrollo saludable
+              </p>
+            </div>
           </div>
 
-          <div
-            class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r"
-          >
-            <div class="flex">
-              <div class="flex-shrink-0 text-yellow-500">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                    clip-rule="evenodd"></path>
-                </svg>
+          <!-- Contenido mejorado -->
+          <div class="p-8 sm:p-10">
+            <div class="prose prose-orange max-w-none">
+              <p class="text-lg text-gray-700 mb-6">
+                La alimentación en los primeros años de vida es fundamental para
+                prevenir problemas nutricionales como la anemia y establecer
+                patrones saludables que durarán toda la vida.
+              </p>
+
+              <div
+                class="bg-amber-100 rounded-xl p-6 shadow-sm border-l-4 border-orange-400"
+              >
+                <h3 class="text-xl font-semibold text-orange-700 mb-4">
+                  Los 3 Pilares de la Alimentación Saludable:
+                </h3>
+
+                <ol class="space-y-6">
+                  <!-- Paso 1 mejorado -->
+                  <li
+                    class="flex items-start bg-white p-4 rounded-lg shadow-xs"
+                  >
+                    <div
+                      class="bg-orange-500 text-white rounded-full h-8 w-8 flex items-center justify-center mr-4 font-bold flex-shrink-0"
+                    >
+                      1
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">
+                        Reconocer las señales
+                      </h4>
+                      <p class="text-gray-600 mt-2">
+                        Los niños muestran hambre y saciedad mediante gestos,
+                        sonidos y movimientos. Aprende a interpretarlos
+                        correctamente.
+                      </p>
+                    </div>
+                  </li>
+
+                  <!-- Paso 2 mejorado -->
+                  <li
+                    class="flex items-start bg-white p-4 rounded-lg shadow-xs"
+                  >
+                    <div
+                      class="bg-orange-500 text-white rounded-full h-8 w-8 flex items-center justify-center mr-4 font-bold flex-shrink-0"
+                    >
+                      2
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">
+                        Responder adecuadamente
+                      </h4>
+                      <p class="text-gray-600 mt-2">
+                        Los cuidadores deben ofrecer alimentos nutritivos en un
+                        ambiente tranquilo y afectuoso, respetando el ritmo de
+                        cada niño.
+                      </p>
+                    </div>
+                  </li>
+
+                  <!-- Paso 3 mejorado -->
+                  <li
+                    class="flex items-start bg-white p-4 rounded-lg shadow-xs"
+                  >
+                    <div
+                      class="bg-orange-500 text-white rounded-full h-8 w-8 flex items-center justify-center mr-4 font-bold flex-shrink-0"
+                    >
+                      3
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">
+                        Crear hábitos duraderos
+                      </h4>
+                      <p class="text-gray-600 mt-2">
+                        La consistencia en horarios, alimentos ofrecidos y
+                        ambiente durante las comidas ayuda a establecer patrones
+                        saludables.
+                      </p>
+                    </div>
+                  </li>
+                </ol>
               </div>
-              <div class="ml-3">
-                <p class="text-sm text-yellow-700">
-                  Este enfoque de reciprocidad entre el niño(a) y quien lo
-                  alimenta es fundamental para desarrollar una relación
-                  saludable con la comida desde temprana edad.
-                </p>
+
+              <!-- Nota importante mejorada -->
+              <div
+                class="mt-8 bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg flex items-start"
+              >
+                <span class="text-orange-500 text-2xl mr-3">💡</span>
+                <div>
+                  <p class="text-orange-800 font-medium">
+                    Este enfoque de <strong>reciprocidad</strong> entre el niño y
+                    su cuidador es clave para desarrollar una relación saludable
+                    con la comida desde temprana edad.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -259,6 +245,37 @@ import Layout from "../layout/Layout.astro";
       </div>
     </div>
   </section>
-</Layout>
 
-<!-- Otras secciones pueden ir aquí -->
+  <!-- Nueva Sección: Recetas Destacadas -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+          Recetas <span class="text-amber-500">Ricas en Hierro</span>
+        </h2>
+        <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          Deliciosas opciones para combatir la anemia infantil
+        </p>
+      </div>
+      <div class="text-center mt-12">
+        <a
+          href="/recetas"
+          class="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg"
+        >
+          Ver todas las recetas
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 ml-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
