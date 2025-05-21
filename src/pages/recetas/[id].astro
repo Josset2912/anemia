@@ -17,7 +17,9 @@ const { receta } = Astro.props;
   <!-- Cabecera colorida -->
   <div class="bg-gradient-to-r from-yellow-400 to-orange-400 py-4 shadow-md">
     <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-2xl font-bold text-white drop-shadow-md">{receta.titulo}</h1>
+      <h1 class="text-2xl font-bold text-white drop-shadow-md">
+        {receta.titulo}
+      </h1>
       <div class="flex items-center mt-2 text-white text-sm">
         <span class="bg-white/20 px-2 py-1 rounded-full mr-2">
           {receta.edad}
@@ -39,7 +41,9 @@ const { receta } = Astro.props;
     />
 
     <!-- Descripción -->
-    <p class="bg-blue-50 border-l-4 border-blue-400 px-4 py-3 rounded-r-lg text-gray-700 mb-8">
+    <p
+      class="bg-blue-50 border-l-4 border-blue-400 px-4 py-3 rounded-r-lg text-gray-700 mb-8"
+    >
       {receta.descripcion}
     </p>
 
@@ -52,12 +56,14 @@ const { receta } = Astro.props;
           Ingredientes
         </h2>
         <ul class="space-y-2">
-          {receta.ingredientes.map((ingrediente) => (
-            <li class="flex items-start">
-              <span class="text-green-500 mr-2">✓</span>
-              <span>{ingrediente}</span>
-            </li>
-          ))}
+          {
+            receta.ingredientes.map((ingrediente) => (
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>{ingrediente}</span>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
@@ -68,47 +74,32 @@ const { receta } = Astro.props;
           Preparación
         </h2>
         <ol class="space-y-4">
-          {receta.preparacion.map((paso, index) => (
-            <li class="flex">
-              <span class="bg-purple-200 text-purple-800 font-bold h-6 w-6 flex items-center justify-center rounded-full mr-3 flex-shrink-0">
-                {index + 1}
-              </span>
-              <p>{paso}</p>
-            </li>
-          ))}
+          {
+            receta.preparacion.map((paso, index) => (
+              <li class="flex">
+                <span class="bg-purple-200 text-purple-800 font-bold h-6 w-6 flex items-center justify-center rounded-full mr-3 flex-shrink-0">
+                  {index + 1}
+                </span>
+                <p>{paso}</p>
+              </li>
+            ))
+          }
         </ol>
       </div>
     </div>
 
     <!-- Notas -->
-    {receta.notas && (
-      <div class="bg-yellow-50 border-l-4 border-yellow-400 px-4 py-3 rounded-r-lg mt-6">
-        <div class="flex items-center text-yellow-800 font-medium">
-          <span class="mr-2">💡</span>
-          <h3 class="text-lg">Consejo importante</h3>
+    {
+      receta.notas && (
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 px-4 py-3 rounded-r-lg mt-6">
+          <div class="flex items-center text-yellow-800 font-medium">
+            <span class="mr-2">💡</span>
+            <h3 class="text-lg">Consejo importante</h3>
+          </div>
+          <p class="mt-1">{receta.notas}</p>
         </div>
-        <p class="mt-1">{receta.notas}</p>
-      </div>
-    )}
+      )
+    }
 
-    <!-- Nutrientes -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
-      <div class="bg-red-50 p-3 rounded-lg text-center">
-        <p class="text-sm text-red-500">Calorías</p>
-        <p class="text-xl font-bold">{receta.nutriente?.calorias}</p>
-      </div>
-      <div class="bg-blue-50 p-3 rounded-lg text-center">
-        <p class="text-sm text-blue-500">Proteínas</p>
-        <p class="text-xl font-bold">{receta.nutriente?.proteinas}g</p>
-      </div>
-      <div class="bg-green-50 p-3 rounded-lg text-center">
-        <p class="text-sm text-green-500">Carbohidratos</p>
-        <p class="text-xl font-bold">{receta.nutriente?.carbohidratos}g</p>
-      </div>
-      <div class="bg-orange-50 p-3 rounded-lg text-center">
-        <p class="text-sm text-orange-500">Grasas</p>
-        <p class="text-xl font-bold">{receta.nutriente?.grasas}g</p>
-      </div>
-    </div>
   </main>
 </Layout>

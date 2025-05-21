@@ -4,7 +4,7 @@
       "id": "pure-carnes-vegetales",
       "titulo": "Purecito Nutritivo",
       "descripcion": "Primera comida rica en hierro hemínico para bebés de 6 meses.",
-      "imagen": "/src/images/pure-carnes.jpg",
+      "imagen": "/src/images/purecito.png",
       "categoria": "Carnes",
       "edad": "6-8",
       "tiempo": "30 minutos",
@@ -33,13 +33,14 @@
         "Agregar la zanahoria y la espinaca aplastadas.",
         "Dar vueltas hasta que cocine y toma una consistencia espesa y servir."
       ],
-      "notas": "Para bebés que recién inician alimentación complementaria. Textura muy suave."
+      "notas": "Para bebés que recién inician alimentación complementaria. Textura muy suave.",
+      "video": "https://www.youtube.com/shorts/ppb6HGqdDLg"
     },
     {
       "id": "lentejas-espinacas",
       "titulo": "Suavecito Infantil",
       "descripcion": "Combinación perfecta de hierro vegetal y vitamina C para mejor absorción.",
-      "imagen": "/src/images/lentejas-espinacas.jpg",
+      "imagen": "/src/images/suavecito.png",
       "categoria": "Legumbres",
       "edad": "6-8",
       "tiempo": "45 minutos",
@@ -64,77 +65,15 @@
         "Aplastar con ayuda de un tenedor la papa amarilla sancochada, el higado, agregar el zapallo aplastado.",
         "Mezclar bien hasta obtener una consistencia espesa."
       ],
-      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro."
-    },
-    {
-      "id": "lentejas-espinacas",
-      "titulo": "Especito de bazo con camote",
-      "descripcion": "Combinación perfecta de hierro vegetal y vitamina C para mejor absorción.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
-      "categoria": "Legumbres",
-      "edad": "6-8",
-      "tiempo": "45 minutos",
-      "nivel": "Fácil",
-      "nutrientes": ["Hierro no hemínico", "Vitamina C", "Fibra"],
-      "nutriente": {
-        "calorias": 200,
-        "proteinas": 12,
-        "carbohidratos": 30,
-        "grasas": 5
-      },
-      "porciones": 4,
-      "ingredientes": [
-        "Una rodaja grusa de camote",
-        "2 cucharadas de bazo",
-        "⅛ unidad pequeña de zanahoria",
-        "½ cucharadita de aceite vegetal",
-        "2 cucharadas de caldo"
-      ],
-      "preparacion": [
-        "Con ayuda de una cuchara vaciar el contenido del bazo y una vez obtenida la pulpa sancocharla y reservar el caldo.",
-        "Aparte, sancochar la zanahoria y el camote sin cascara.",
-        "Aplastar con ayuda de un tenedor el camote sancochado y la zanahoria sancochada",
-        "Mezclar todos los ingredientes: el bazo, la zanahoria, el camote, el caldo y el aceite hasta tener una consistencia espesa y servir."
-      ],
-      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro."
-    },
-    {
-      "id": "lentejas-espinacas",
-      "titulo": "Delicia de Hígado",
-      "descripcion": "Combinación perfecta de hierro vegetal y vitamina C para mejor absorción.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
-      "categoria": "Legumbres",
-      "edad": "6-8",
-      "tiempo": "45 minutos",
-      "nivel": "Fácil",
-      "nutrientes": ["Hierro no hemínico", "Vitamina C", "Fibra"],
-      "nutriente": {
-        "calorias": 200,
-        "proteinas": 12,
-        "carbohidratos": 30,
-        "grasas": 5
-      },
-      "porciones": 4,
-      "ingredientes": [
-        "1 unidad chica de papa amarilla",
-        "1 unidad de higado de pollo",
-        "1 trozo de zapallo",
-        "1 cucharadita de aceite vegetal",
-        "¼ de taza de caldo"
-      ],
-      "preparacion": [
-        "Zancochar la papa amarilla y el higado de pollo y guardar el caldo.",
-        "Aplastar con ayuda de un tenedor la papa amarilla sancochada, el higado, agregar el zapallo aplastado",
-        "Mezclar bien hasta obtener una consistencia espesa."
-      ],
-      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro."
+      "notas": "Servir con unas gotas de limón para mejorar la absorción de hierro.",
+      "video": "https://www.youtube.com/watch?v=1ctAUSACZTM"
     },
 
     {
       "id": "huevo-zanahoria",
-      "titulo": "Lomita de Sangrecita",
+      "titulo": "Lomito de Sangrecita",
       "descripcion": "Excelente fuente de proteínas y vitamina A para bebés mayores.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/lomito.png",
       "categoria": "Carnes",
       "edad": "9-11",
       "tiempo": "20 minutos",
@@ -163,14 +102,15 @@
         "Cuando este cocida la papa, adicionar la sangrecita picada en cuadritos y el perejil picado finamente.",
         "Mezclar todo y dar un hervor. Servir acompañado de arroz graneado."
       ],
-      "notas": "Asegurarse que el huevo esté bien cocido. Introducir después de confirmar que no hay alergia."
+      "notas": "Asegurarse que el huevo esté bien cocido. Introducir después de confirmar que no hay alergia.",
+      "video": "https://www.youtube.com/watch?v=tyRtSdXOZQw"
     },
 
     {
       "id": "albondigas-hierro",
       "titulo": "Tallarines verdes con hígado de pollo",
       "descripcion": "Deliciosa combinación de hierro y fibra para una comida completa.",
-      "imagen": "/images/albondigas.jpg",
+      "imagen": "/src/images/tallarines.png",
       "categoria": "Carnes",
       "edad": "9-11",
       "tiempo": "40 minutos",
@@ -200,14 +140,15 @@
         "Aparte, en una olla freír el ajo molido, el aceite vegetal, el hígado picado en cuadritos, la sal, la espinaca licuada y cocinar. Al final adicionar la leche.",
         "Mezclar los fideos sancochados con el aderezo anterior y servir"
       ],
-      "notas": "Pueden congelarse las albóndigas ya cocidas para comidas rápidas."
+      "notas": "Pueden congelarse las albóndigas ya cocidas para comidas rápidas.",
+      "video": ""
     },
 
     {
       "id": "batido-frutas-hierro",
       "titulo": "Pure de habas con sangrecita al jugo",
       "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/pure.png",
       "categoria": "Bebidas",
       "edad": "9-11",
       "tiempo": "10 minutos",
@@ -239,14 +180,15 @@
         "Agregar el pimiento licuado, la sangrecita picada en cuadraditos y el resto de agua. Dejar cocinar.",
         "Servir el puré con la sangrecita al jugo acompañado de arroz."
       ],
-      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C.",
+      "video": "https://www.youtube.com/watch?v=example"
     },
 
     {
       "id": "batido-frutas-hierro",
       "titulo": "Seco de hígado de pollo",
       "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/seco.png",
       "categoria": "Bebidas",
       "edad": "9-11",
       "tiempo": "10 minutos",
@@ -283,7 +225,7 @@
       "id": "batido-frutas-hierro",
       "titulo": "Locro de zapallo con hígado de res",
       "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/locro.png",
       "categoria": "Bebidas",
       "edad": "12-23",
       "tiempo": "10 minutos",
@@ -317,14 +259,15 @@
         " Para preparar el hígado al jugo, lavar y sazonar el hígado con la sal, la espinaca licuada y ponerlo a cocinar con el resto de agua.",
         "Servir el locro de zapallo con el hígado de res al jugo acompañado de arroz graneado."
       ],
-      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C."
+      "notas": "Servir inmediatamente después de preparar para maximizar el contenido de vitamina C.",
+      "video":"https://www.youtube.com/watch?v=0l3rkk9cCqE"
     },
 
     {
       "id": "batido-frutas-hierro",
       "titulo": "Trigo a la jardinera",
       "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/trigo.png",
       "categoria": "Bebidas",
       "edad": "12-23",
       "tiempo": "10 minutos",
@@ -364,7 +307,7 @@
       "id": "batido-frutas-hierro",
       "titulo": "Tortilla brillante",
       "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/tortilla.png",
       "categoria": "Bebidas",
       "edad": "12-23",
       "tiempo": "10 minutos",
@@ -401,7 +344,7 @@
       "id": "batido-frutas-hierro",
       "titulo": "Hígado en salsa verde",
       "descripcion": "Combinación perfecta de hierro y fibra para una comida completa.",
-      "imagen": "/src/images/huevo-zanahoria.jpg",
+      "imagen": "/src/images/higado.png",
       "categoria": "Bebidas",
       "edad": "12-23",
       "tiempo": "10 minutos",

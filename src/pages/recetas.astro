@@ -12,111 +12,130 @@ const gruposEdad = {
 ---
 
 <Layout title="Recetas Contra la Anemia Infantil | NutriKids">
-  <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-    <!-- Hero Section Mejorada -->
-    <section class="text-center mb-12 bg-gradient-to-br from-amber-400 to-orange-400 rounded-2xl p-8 sm:p-12 text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+')]"></div>
+  <!-- Selector de edad flotante sticky -->
+  <div class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="container mx-auto px-4">
+      <div class="flex overflow-x-auto py-3 hide-scrollbar">
+        {
+          Object.keys(gruposEdad).map((edad) => (
+            <a
+              href={`#${edad.replace(/\s+/g, "-")}`}
+              class="flex-shrink-0 px-6 py-2 mx-1 rounded-full text-sm font-medium 
+                    bg-white text-orange-600 border border-orange-200 hover:bg-orange-50
+                    transition-colors duration-200 flex items-center whitespace-nowrap
+                    data-[active=true]:bg-orange-500 data-[active=true]:text-white
+                    data-[active=true]:border-orange-500"
+              data-active={false}
+            >
+              {edad === "6 a 8 meses" && <span class="mr-2">👶</span>}
+              {edad === "9 a 11 meses" && <span class="mr-2">🍼</span>}
+              {edad === "12 a 23 meses" && <span class="mr-2">🧒</span>}
+              {edad}
+            </a>
+          ))
+        }
       </div>
-      <div class="relative z-10">
-        <div class="inline-flex bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 mb-6">
-          <span class="text-white font-bold uppercase tracking-wider text-sm">Alimentación Saludable</span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-          Deliciosas Recetas <span class="text-amber-100">Contra la Anemia</span>
+    </div>
+  </div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Hero Section Rediseñada -->
+    <section class="relative text-center pt-16 pb-24 bg-gradient-to-br from-amber-50 to-orange-50">
+      <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMTQ2LDAsMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto">
+     
+        
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">
+            Recetas Contra la Anemia
+          </span>
         </h1>
-        <p class="text-lg sm:text-xl text-amber-100 max-w-3xl mx-auto mb-8">
-          Alimentos ricos en hierro adaptados a cada etapa de desarrollo de tu bebé
+        
+        <p class="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
+          Descubre menús ricos en hierro diseñados para cada etapa de desarrollo infantil
         </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          {
-            Object.keys(gruposEdad).map((edad) => (
-              <a
-                href={`#${edad.replace(/\s+/g, "-")}`}
-                class="px-5 py-2 rounded-full text-sm font-medium bg-white/90 text-orange-600 
-                     hover:bg-white hover:shadow-md transition-all"
-              >
-                {edad}
-              </a>
-            ))
-          }
-        </div>
       </div>
+
+      <div class="absolute bottom-0 left-0 right-0 h-16 bg-white clip-path-wave"></div>
     </section>
 
     <!-- Sección por grupos de edad -->
     {
       Object.entries(gruposEdad).map(([edad, recetas]) => (
-        <section id={edad.replace(/\s+/g, "-")} class="mb-16 scroll-mt-20">
-          <!-- Encabezado mejorado -->
-          <div class="flex flex-col sm:flex-row items-start sm:items-center mb-8 p-4 bg-white rounded-xl shadow-sm">
-            <div class="mr-4 p-3 rounded-lg bg-amber-100 text-amber-600 mb-4 sm:mb-0">
-              <span class="text-2xl">
+        <section id={edad.replace(/\s+/g, "-")} class="mb-20 scroll-mt-16">
+          <!-- Encabezado rediseñado -->
+          <div class="flex items-start mb-10 p-5 bg-white rounded-2xl shadow-md border-l-4 border-amber-400 text">
+            <div class="mr-5 p-3 rounded-xl bg-gradient-to-br from-amber-400 to-orange-400 text-white shadow-sm">
+              <span class="text-3xl block">
                 {edad === "6 a 8 meses" && "👶"}
                 {edad === "9 a 11 meses" && "🍼"}
                 {edad === "12 a 23 meses" && "🧒"}
               </span>
             </div>
             <div>
-              <h2 class="text-xl sm:text-2xl font-bold text-gray-900">
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-1.5">
                 Recetas para {edad}
               </h2>
-              <p class="text-gray-600">
-                {edad === "6 a 8 meses" && "Primeras comidas - purés suaves y fáciles de digerir"}
-                {edad === "9 a 11 meses" && "Texturas más gruesas - estimulación de la masticación"}
-                {edad === "12 a 23 meses" && "Alimentos familiares - dieta variada y nutritiva"}
+              <p class="text-gray-600 max-w-2xl">
+                {edad === "6 a 8 meses" && "Introducción a sólidos con purés ricos en hierro y texturas suaves"}
+                {edad === "9 a 11 meses" && "Alimentos con más textura para estimular la masticación"}
+                {edad === "12 a 23 meses" && "Dieta variada que incluye alimentos de la familia"}
               </p>
             </div>
           </div>
 
           {recetas.length > 0 ? (
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {recetas.map((receta) => (
                 <article
-                  class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow 
-                        border border-gray-100 hover:border-amber-200 flex flex-col h-full transform hover:-translate-y-1 transition-transform"
+                  class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transitio duration-300 
+                        border border-gray-100 hover:border-amber-300 flex flex-col h-full transform hover:-translate-y-2 transition-transform"
                 >
-                  {/* Imagen con efecto mejorado */}
-                  <div class="relative aspect-[4/3] overflow-hidden">
+                  {/* Imagen con overlay mejorado */}
+                  <div class="relative aspect-[5/4] overflow-hidden group">
                     <img
                       src={receta.imagen}
                       alt={receta.titulo}
-                      class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                    <span class="absolute top-3 right-3 bg-white/90 text-gray-800 text-xs font-bold px-3 py-1 rounded-full shadow-sm flex items-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                    <span class="absolute top-4 right-4 bg-white/90 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center backdrop-blur-sm">
                       ⏱️ <span class="ml-1">{receta.tiempo}</span>
                     </span>
-                    <span class="absolute bottom-3 left-3 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                    <span class="absolute bottom-4 left-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                       {receta.edad === "6-8" ? "6-8 meses" : 
                        receta.edad === "9-11" ? "9-11 meses" : "1-2 años"}
                     </span>
                   </div>
 
-                  {/* Contenido mejorado */}
-                  <div class="p-5 flex-grow flex flex-col">
-                    <div class="flex justify-between items-start mb-3">
-                      <h3 class="text-lg font-bold text-gray-900">
+                  {/* Contenido rediseñado */}
+                  <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                      <h3 class="text-xl font-bold text-gray-900 leading-snug">
                         {receta.titulo}
                       </h3>
-                      <span class="text-xs text-gray-600 bg-gray-50 px-2 py-1 rounded-full flex items-center">
+                      <span class="text-xs text-gray-600 bg-gray-50 px-2.5 py-1 rounded-full flex items-center shadow-inner">
                         🍽️ <span class="ml-1">{receta.porciones}</span>
                       </span>
                     </div>
 
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-2 flex-grow">
+                    <p class="text-gray-600 text-sm mb-5 line-clamp-3 flex-grow">
                       {receta.descripcion}
                     </p>
 
-                    {/* Nutrientes destacados mejorados */}
-                    <div class="mb-4">
-                      <h4 class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">
+                    {/* Nutrientes destacados */}
+                    <div class="mb-5">
+                      <h4 class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider flex items-center">
+                        <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                         Nutrientes Clave
                       </h4>
                       <div class="flex flex-wrap gap-2">
                         {receta.nutrientes?.map((nutriente) => (
-                          <span class="text-xs px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">
+                          <span class="text-xs px-3 py-1 rounded-full bg-amber-50/80 text-amber-700 border border-amber-100 hover:bg-amber-100 transition-colors">
                             {nutriente}
                           </span>
                         ))}
@@ -126,8 +145,8 @@ const gruposEdad = {
                     <a
                       href={`/recetas/${receta.id}`}
                       class="mt-auto text-sm font-medium inline-flex items-center justify-center
-                          text-white bg-amber-500 hover:bg-amber-600 transition-colors
-                          group px-4 py-2 rounded-lg hover:shadow-md w-full text-center"
+                          text-white bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 transition-all
+                          group px-5 py-3 rounded-xl hover:shadow-md w-full text-center"
                     >
                       Ver receta completa
                       <svg
@@ -150,16 +169,21 @@ const gruposEdad = {
               ))}
             </div>
           ) : (
-            <div class="bg-amber-50 rounded-xl p-8 text-center border-2 border-amber-100 border-dashed">
-              <span class="text-4xl block mb-4">🍎</span>
-              <h3 class="text-lg font-medium text-gray-900 mt-4">
+            <div class="bg-amber-50 rounded-2xl p-10 text-center border-2 border-amber-200 border-dashed">
+              <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <span class="text-3xl">🍲</span>
+              </div>
+              <h3 class="text-xl font-medium text-gray-900">
                 Próximamente más recetas
               </h3>
-              <p class="text-gray-600 mt-2 max-w-md mx-auto">
-                Estamos trabajando en nuevas recetas especialmente diseñadas para este grupo de edad.
+              <p class="text-gray-600 mt-3 max-w-md mx-auto">
+                Estamos desarrollando nuevas recetas especialmente diseñadas para este grupo de edad.
               </p>
-              <a href="#contacto" class="mt-4 inline-block text-sm text-amber-600 hover:underline">
+              <a href="#contacto" class="mt-5 inline-flex items-center text-sm font-medium text-amber-600 hover:text-amber-700 hover:underline">
                 ¿Tienes alguna sugerencia?
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </a>
             </div>
           )}
@@ -167,77 +191,98 @@ const gruposEdad = {
       ))
     }
 
-    <!-- Sección de consejos mejorada -->
-    <section class="mt-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 shadow-inner">
-      <div class="text-center mb-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-          Consejos para <span class="text-amber-600">Prevenir la Anemia</span>
+    <!-- Sección de consejos rediseñada -->
+    <section class="mt-20 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-10 shadow-inner">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Combatiendo la <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Anemia Infantil</span>
         </h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Recomendaciones prácticas basadas en las guías del Ministerio de Salud
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          Recomendaciones basadas en las últimas guías de nutrición pediátrica
         </p>
       </div>
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid gap-8 md:grid-cols-3">
         <!-- Consejo 1 -->
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-amber-100 hover:shadow-md transition-shadow">
-          <div class="bg-amber-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-amber-600">
-            <span class="text-2xl">🥩</span>
+        <div class="group bg-white p-7 rounded-2xl shadow-sm border border-amber-100 hover:shadow-lg transition-all duration-300 hover:border-amber-300">
+          <div class="bg-gradient-to-br from-amber-400 to-orange-400 w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white shadow-sm group-hover:rotate-6 transition-transform">
+            <span class="text-3xl">🥩</span>
           </div>
-          <h3 class="font-bold text-lg text-gray-900 mb-2">Hierro Hemínico</h3>
+          <h3 class="font-bold text-xl text-gray-900 mb-3">Fuentes de Hierro</h3>
           <p class="text-gray-600">
-            Incluye carnes rojas, hígado y pescado en la dieta de tu hijo (a partir de los 6 meses). Estos alimentos contienen hierro de fácil absorción.
+            Incluye carnes rojas magras, hígado (1-2 veces por semana) y pescado oscuro. Para vegetarianos: lentejas, espinacas y cereales fortificados.
           </p>
         </div>
         
         <!-- Consejo 2 -->
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
-          <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-orange-600">
-            <span class="text-2xl">🍊</span>
+        <div class="group bg-white p-7 rounded-2xl shadow-sm border border-orange-100 hover:shadow-lg transition-all duration-300 hover:border-orange-300">
+          <div class="bg-gradient-to-br from-orange-400 to-red-400 w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white shadow-sm group-hover:rotate-6 transition-transform">
+            <span class="text-3xl">🍊</span>
           </div>
-          <h3 class="font-bold text-lg text-gray-900 mb-2">Vitamina C</h3>
+          <h3 class="font-bold text-xl text-gray-900 mb-3">Mejora la Absorción</h3>
           <p class="text-gray-600">
-            Combina alimentos ricos en hierro con frutas cítricas (naranja, mandarina, limón) para mejorar la absorción del hierro no hemínico.
+            Combina alimentos con hierro no hemínico (vegetales) con vitamina C (cítricos, pimientos, fresas) para aumentar su absorción hasta 3 veces.
           </p>
         </div>
         
         <!-- Consejo 3 -->
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-amber-100 hover:shadow-md transition-shadow">
-          <div class="bg-amber-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-amber-600">
-            <span class="text-2xl">👩‍⚕️</span>
+        <div class="group bg-white p-7 rounded-2xl shadow-sm border border-amber-100 hover:shadow-lg transition-all duration-300 hover:border-amber-300">
+          <div class="bg-gradient-to-br from-amber-500 to-orange-500 w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white shadow-sm group-hover:rotate-6 transition-transform">
+            <span class="text-3xl">👩‍⚕️</span>
           </div>
-          <h3 class="font-bold text-lg text-gray-900 mb-2">Control Médico</h3>
+          <h3 class="font-bold text-xl text-gray-900 mb-3">Prevención</h3>
           <p class="text-gray-600">
-            Realiza controles periódicos de hemoglobina según lo indique tu pediatra, especialmente a los 6, 12 y 18 meses de edad.
+            Realiza controles de hemoglobina según recomendación médica. La anemia en niños puede afectar su desarrollo cognitivo y motor.
           </p>
         </div>
       </div>
       
       <!-- Banner adicional -->
-      <div class="mt-10 bg-amber-100 rounded-xl p-6 text-center border-2 border-amber-200">
-        <p class="text-amber-800 font-medium">
-          <span class="text-xl mr-2">💡</span> Recuerda que la prevención de la anemia comienza desde el embarazo con una alimentación adecuada de la madre.
+      <div class="mt-12 bg-gradient-to-r from-amber-200 to-orange-200 rounded-2xl p-6 text-center border border-amber-300 shadow-inner">
+        <p class="text-amber-900 font-medium text-lg">
+          <span class="text-2xl mr-3">📌</span> La lactancia materna exclusiva hasta los 6 meses es la primera defensa contra la anemia infantil.
         </p>
       </div>
     </section>
     
-    <!-- Sección de suscripción -->
-    <section class="mt-16 bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl p-8 text-white text-center">
-      <h3 class="text-xl sm:text-2xl font-bold mb-4">¿Quieres más recetas saludables?</h3>
-      <p class="mb-6 max-w-2xl mx-auto">Suscríbete para recibir nuevas recetas y consejos nutricionales cada semana.</p>
-      <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-        <input 
-          type="email" 
-          placeholder="Tu correo electrónico" 
-          class="flex-grow px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white text-gray-900"
-          required
-        />
-        <button 
-          type="submit" 
-          class="px-6 py-3 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-md"
-        >
-          Suscribirme
-        </button>
-      </form>
-    </section>
+    <!-- Sección de suscripción rediseñada -->
+
   </main>
+
+  <style>
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .clip-path-wave {
+      clip-path: ellipse(75% 100% at center top);
+    }
+  </style>
+
+  <script is:inline>
+    // Actualizar selector activo al hacer scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const ageGroups = Object.keys(gruposEdad);
+      const links = document.querySelectorAll('[href^="#"]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            links.forEach(link => {
+              link.setAttribute('data-active', 
+                link.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, {threshold: 0.5});
+      
+      ageGroups.forEach(age => {
+        const section = document.getElementById(age.replace(/\s+/g, "-"));
+        if (section) observer.observe(section);
+      });
+    });
+  </script>
 </Layout>
