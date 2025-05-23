@@ -9,24 +9,34 @@ import Layout from "../layout/Layout.astro";
       <div class="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
         <div class="mb-12 lg:mb-0">
           <h1
-            class="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl mb-6 leading-tight"
+            class="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-5xl mb-6 leading-tight"
           >
-            <span class="block">Acciones contra la</span>
+            <span class="text-red-600 relative inline-block">
+              Creciendo con Salud:
+              <span
+                class="absolute bottom-0 left-0 w-full h-2 bg-red-100 transform translate-y-1"
+              ></span>
+            </span>
+            <!-- <span class="block">Acciones contra la</span>
             <span class="text-red-600 relative inline-block">
               Anemia Infantil
               <span
                 class="absolute bottom-0 left-0 w-full h-2 bg-red-100 transform translate-y-1"
               ></span>
             </span>
-            <span class="block">en el Perú</span>
+            <span class="block">en el Perú</span> -->
           </h1>
-
+          <h2
+            class="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-4xl mb-6 leading-tight"
+          >
+            Prevención de la anemia infantil en el Perú
+          </h2>
           <p
             class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed"
           >
-            El Ministerio de Salud implementa estrategias integrales para
-            combatir la anemia en niños menores de 3 años, priorizando la
-            nutrición y el desarrollo infantil temprano.
+            Apoyamos a las familias en el cuidado de sus niños, con acciones que
+            promueven una buena alimentación y un desarrollo saludable desde por
+            primeros años de vida.
           </p>
         </div>
 
@@ -37,11 +47,14 @@ import Layout from "../layout/Layout.astro";
             <div
               class="bg-red-50 p-5 rounded-xl border border-red-100 hover:shadow-md transition-shadow"
             >
-              <div class="text-red-600 font-bold text-3xl mb-2">40%</div>
+              <!-- <div class="text-red-600 font-bold text-3xl mb-2">40%</div> -->
               <div class="text-sm text-gray-700">
-                Prevalencia nacional actual
+                <strong>En el Perú</strong> los indices de anemia alcanza el <strong
+                  >43,1%</strong
+                > a nivel nacional, según la última Encuesta Nacional de Demografía
+                y Salud (ENDES 2023)
               </div>
-              <div class="mt-2 text-xs text-red-500 flex items-center">
+              <!-- <div class="mt-2 text-xs text-red-500 flex items-center">
                 <svg
                   class="w-4 h-4 mr-1"
                   fill="none"
@@ -55,42 +68,49 @@ import Layout from "../layout/Layout.astro";
                     d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
                 3.6% menos desde 2019
-              </div>
+              </div> -->
             </div>
 
             <!-- Tarjeta 2 -->
             <div
               class="bg-amber-50 p-5 rounded-xl border border-amber-100 hover:shadow-md transition-shadow"
             >
-              <div class="text-amber-600 font-bold text-3xl mb-2">20%</div>
-              <div class="text-sm text-gray-700">Meta nacional para 2025</div>
-              <div class="mt-2 text-xs text-amber-600">
-                Objetivo del Plan Nacional
+              <!-- <div class="text-amber-600 font-bold text-3xl mb-2">20%</div> -->
+              <div class="text-sm text-gray-700">
+                <strong>El objetivo del plan nacional</strong> para el 2025 es reducir
+                la tasa de anemia un <strong>20% de casos</strong>
               </div>
+              <!-- <div class="mt-2 text-xs text-amber-600">
+                Objetivo del Plan Nacional
+              </div> -->
             </div>
 
             <!-- Tarjeta 3 -->
             <div
               class="bg-blue-50 p-5 rounded-xl border border-blue-100 hover:shadow-md transition-shadow"
             >
-              <div class="text-blue-600 font-bold text-3xl mb-2">62%</div>
+              <!-- <div class="text-blue-600 font-bold text-3xl mb-2">62%</div> -->
               <div class="text-sm text-gray-700">
-                Región con mayor prevalencia (Loreto)
+                <strong>Loreto</strong> registra la mayor prevalencia de <strong
+                  >anemia infantil</strong
+                > en Perú, afectando al <strong>62%</strong> de los niños y requiriendo
+                atención primaria urgente
               </div>
-              <div class="mt-2 text-xs text-blue-600">
+              <!-- <div class="mt-2 text-xs text-blue-600">
                 Requiere atención prioritaria
-              </div>
+              </div> -->
             </div>
 
             <!-- Tarjeta 4 -->
             <div
               class="bg-green-50 p-5 rounded-xl border border-green-100 hover:shadow-md transition-shadow"
             >
-              <div class="text-green-600 font-bold text-3xl mb-2">85%</div>
+              <!-- <div class="text-green-600 font-bold text-3xl mb-2">85%</div> -->
               <div class="text-sm text-gray-700">
-                Cobertura de suplementos de hierro
+                La <strong>cobertura de suplementos</strong> de hierro ha alcanzado
+                el <strong>85%</strong> y continúa mejorando año tras año.
               </div>
-              <div class="mt-2 text-xs text-green-600">Mejorando cada año</div>
+              <!-- <div class="mt-2 text-xs text-green-600">Mejorando cada año</div> -->
             </div>
           </div>
 
@@ -109,17 +129,16 @@ import Layout from "../layout/Layout.astro";
               </svg>
               <p class="text-sm text-gray-600">
                 La anemia por deficiencia de hierro afecta el desarrollo
-                cognitivo y físico de los niños. Nuestras estrategias buscan
-                reducir este impacto.
+                cognitivo y físico de los niños.
               </p>
             </div>
           </div>
 
           <!-- Elementos decorativos -->
-          <div
+          <!-- <div
             class="absolute -bottom-6 -left-6 w-28 h-28 bg-blue-100 rounded-full opacity-30"
           >
-          </div>
+          </div> -->
           <div
             class="absolute -top-6 -right-6 w-24 h-24 bg-amber-100 rounded-full opacity-30"
           >
@@ -141,13 +160,15 @@ import Layout from "../layout/Layout.astro";
         <div
           class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border-t-4 border-red-500"
         >
-          <div class="text-red-500 text-4xl font-bold mb-4">9%</div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Reducción en CI
-          </h3>
+          <div class="text-red-500 text-4xl font-bold mb-4">
+            Coeficiente Intelectual
+          </div>
+          <!-- <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Disminición
+          </h3> -->
           <p class="text-gray-600">
-            Disminución en el coeficiente intelectual comparado con niños sin
-            anemia.
+            <strong>Disminucion del 9%</strong> en el coeficiente intelectual comparado
+            con niños sin anemia.
           </p>
         </div>
 
@@ -155,12 +176,15 @@ import Layout from "../layout/Layout.astro";
         <div
           class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border-t-4 border-blue-500"
         >
-          <div class="text-blue-500 text-4xl font-bold mb-4">25%</div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <div class="text-blue-500 text-4xl font-bold mb-4">
             Rendimiento escolar
-          </h3>
+          </div>
+          <!-- <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            
+          </h3> -->
           <p class="text-gray-600">
-            Menor capacidad de atención y aprendizaje en la etapa escolar.
+            Menor <strong>capacidad de atención</strong> y aprendizaje en la etapa
+            escolar.
           </p>
         </div>
 
@@ -168,10 +192,12 @@ import Layout from "../layout/Layout.astro";
         <div
           class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border-t-4 border-amber-500"
         >
-          <div class="text-amber-500 text-4xl font-bold mb-4">60%+</div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Regiones afectadas
-          </h3>
+          <div class="text-amber-500 text-4xl font-bold mb-4">
+            Regiones más afectadas
+          </div>
+          <!-- <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            
+          </h3> -->
           <p class="text-gray-600">
             Prevalencia en zonas como Puno, Huancavelica y Loreto.
           </p>
@@ -391,7 +417,8 @@ import Layout from "../layout/Layout.astro";
           Alimentos ricos en hierro
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Incluye estos alimentos en la dieta de tu hijo a partir de los 6 meses
+          Incluye estos alimentos en las comidas diarias de tu hijo a partir de
+          los 6 meses
         </p>
       </div>
 
@@ -401,11 +428,12 @@ import Layout from "../layout/Layout.astro";
           class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
         >
           <div
-            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
           >
-            <span class="text-3xl">🍖</span>
+            <img src="/images/carne-roja.png" class="w-full h-full" />
           </div>
-          <h3 class="font-semibold text-lg text-gray-900 mb-2">Carnes rojas</h3>
+
+          <h3 class="font-semibold text-lg text-gray-900 mb-2">Carnes Rojas</h3>
           <p class="text-gray-600 text-sm">
             Contienen hierro hemo de alta absorción
           </p>
@@ -416,13 +444,14 @@ import Layout from "../layout/Layout.astro";
           class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
         >
           <div
-            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
           >
-            <span class="text-3xl">🍗</span>
+            <img src="/images/higado-pollo.png" class="w-full h-full" />
           </div>
           <h3 class="font-semibold text-lg text-gray-900 mb-2">Hígado</h3>
           <p class="text-gray-600 text-sm">
-            Una de las mejores fuentes de hierro
+            Fuente de vitamina A importante para la visión, la salud de la piel
+            y la regeneración celular.
           </p>
         </div>
 
@@ -431,9 +460,9 @@ import Layout from "../layout/Layout.astro";
           class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
         >
           <div
-            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
           >
-            <span class="text-3xl">🥩</span>
+            <img src="/images/sangre-cita.png" class="w-full h-full" />
           </div>
           <h3 class="font-semibold text-lg text-gray-900 mb-2">Sangrecita</h3>
           <p class="text-gray-600 text-sm">Tradicional y muy rica en hierro</p>
@@ -444,12 +473,80 @@ import Layout from "../layout/Layout.astro";
           class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
         >
           <div
-            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
           >
-            <span class="text-3xl">🥚</span>
+            <img src="/images/huevo-cito.png" class="w-full h-full" />
           </div>
           <h3 class="font-semibold text-lg text-gray-900 mb-2">Huevo</h3>
           <p class="text-gray-600 text-sm">Especialmente la yema</p>
+        </div>
+
+        <!-- Alimento 5 -->
+        <div
+          class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
+        >
+          <div
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
+          >
+            <img src="/images/bofe-pulmon.png" class="w-full h-full" />
+          </div>
+
+          <h3 class="font-semibold text-lg text-gray-900 mb-2">Bofe</h3>
+          <p class="text-gray-600 text-sm">
+            Mejoran la función nerviosa y muscular.
+          </p>
+        </div>
+
+        <!-- Alimento 6 -->
+        <div
+          class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
+        >
+          <div
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
+          >
+            <img
+              src="/images/menestra-nutricion.png"
+              class="w-full h-full"
+            />
+          </div>
+          <h3 class="font-semibold text-lg text-gray-900 mb-2">Menestras</h3>
+          <p class="text-gray-600 text-sm">
+            Esencial para la formación de glóbulos rojos
+          </p>
+        </div>
+
+        <!-- Alimento 7 -->
+        <div
+          class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
+        >
+          <div
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
+          >
+            <img
+              src="/public/images/pescado-nutricion.png"
+              class="w-full h-full"
+            />
+          </div>
+          <h3 class="font-semibold text-lg text-gray-900 mb-2">Pescado</h3>
+          <p class="text-gray-600 text-sm">
+            Carnes oscuras como la anchoveta, bonito y caballa, siendo de fácil
+            absorción por el organismo.
+          </p>
+        </div>
+
+        <!-- Alimento 8 -->
+        <div
+          class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all"
+        >
+          <div
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden"
+          >
+            <img src="/public/images/bazo-nutricion.png" class="w-full h-full" />
+          </div>
+          <h3 class="font-semibold text-lg text-gray-900 mb-2">Bazo</h3>
+          <p class="text-gray-600 text-sm">
+            Fundamental para la función nerviosa y la producción de sangre.
+          </p>
         </div>
       </div>
 
@@ -471,11 +568,9 @@ import Layout from "../layout/Layout.astro";
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-lg text-gray-900 mb-2">
-              Mejora la absorción
-            </h3>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">Recomendación</h3>
             <p class="text-gray-700">
-              Combina alimentos ricos en hierro con frutas cítricas (ricos en
+              Combina alimentos ricos en hierro con alimentos cítricas (ricos en
               vitamina C) para mejorar la absorción del hierro.
             </p>
           </div>
@@ -490,7 +585,8 @@ import Layout from "../layout/Layout.astro";
         Participa en nuestra encuesta
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-        Tu opinión nos ayuda a mejorar las estrategias contra la anemia infantil
+        Tu opinión importa. Ayúdanos a mejorar el contenido y
+        funcionamiento de esta página
       </p>
       <div class="mt-6">
         <a
