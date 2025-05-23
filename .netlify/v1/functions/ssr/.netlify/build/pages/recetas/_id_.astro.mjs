@@ -1,6 +1,6 @@
-import { e as createComponent, f as createAstro, k as renderComponent, r as renderTemplate, m as maybeRenderHead, h as addAttribute } from '../../chunks/astro/server_s204h1uY.mjs';
+import { e as createComponent, f as createAstro, k as renderComponent, r as renderTemplate, m as maybeRenderHead, h as addAttribute } from '../../chunks/astro/server_DuNtUCWs.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../../chunks/Layout_Cwmz7HH4.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_C-aScNvU.mjs';
 import { r as recetasData } from '../../chunks/recetas_DPoNCbNX.mjs';
 export { renderers } from '../../renderers.mjs';
 

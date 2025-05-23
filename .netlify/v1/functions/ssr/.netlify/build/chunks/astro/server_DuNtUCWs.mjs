@@ -4,7 +4,7 @@ import { escape } from 'html-escaper';
 import { decodeBase64, encodeHexUpperCase, encodeBase64 } from '@oslojs/encoding';
 import 'cssesc';
 
-const ASTRO_VERSION = "5.8.0";
+const ASTRO_VERSION = "5.7.13";
 const NOOP_MIDDLEWARE_HEADER = "X-Astro-Noop";
 
 const MissingMediaQueryDirective = {

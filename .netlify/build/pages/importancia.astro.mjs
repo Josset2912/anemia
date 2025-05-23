@@ -1,6 +1,6 @@
-import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_s204h1uY.mjs';
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DuNtUCWs.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_Cwmz7HH4.mjs';
+import { $ as $$Layout } from '../chunks/Layout_C-aScNvU.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Importancia = createComponent(($$result, $$props, $$slots) => {
