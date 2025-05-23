@@ -1,7 +1,7 @@
 ---
 // src/pages/recetas/[id].astro
 import Layout from "../../layout/Layout.astro";
-import recetasData from "../../data/recetas.json";
+import recetasData from "../../../data/recetas.json";
 
 export async function getStaticPaths() {
   return recetasData.recetas.map((receta) => ({
@@ -100,6 +100,5 @@ const { receta } = Astro.props;
         </div>
       )
     }
-
   </main>
 </Layout>
