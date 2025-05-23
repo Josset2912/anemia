@@ -6,6 +6,7 @@ import netlify from "@astrojs/netlify"; // <--- 👈 Importar el adaptador
 export default defineConfig({
   output: "server", // <--- 👈 Importante para Netlify
   adapter: netlify(), // <--- 👈 Aquí se conecta el adaptador
+  
   vite: {
     plugins: [tailwindcss()],
     resolve: {

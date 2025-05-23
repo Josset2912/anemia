@@ -1,0 +1,288 @@
+---
+// src/pages/recetas.astro
+import Layout from "../layout/Layout.astro";
+import recetasData from "../data/recetas.json";
+
+// Organizamos las recetas por grupos de edad
+const gruposEdad = {
+  "6 a 8 meses": recetasData.recetas.filter((r) => r.edad === "6-8"),
+  "9 a 11 meses": recetasData.recetas.filter((r) => r.edad === "9-11"),
+  "12 a 23 meses": recetasData.recetas.filter((r) => r.edad === "12-23"),
+};
+---
+
+<Layout title="Recetas Contra la Anemia Infantil | NutriKids">
+  <!-- Selector de edad flotante sticky -->
+  <div class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="container mx-auto px-4">
+      <div class="flex overflow-x-auto py-3 hide-scrollbar">
+        {
+          Object.keys(gruposEdad).map((edad) => (
+            <a
+              href={`#${edad.replace(/\s+/g, "-")}`}
+              class="flex-shrink-0 px-6 py-2 mx-1 rounded-full text-sm font-medium 
+                    bg-white text-orange-600 border border-orange-200 hover:bg-orange-50
+                    transition-colors duration-200 flex items-center whitespace-nowrap
+                    data-[active=true]:bg-orange-500 data-[active=true]:text-white
+                    data-[active=true]:border-orange-500"
+              data-active={false}
+            >
+              {edad === "6 a 8 meses" && <span class="mr-2">👶</span>}
+              {edad === "9 a 11 meses" && <span class="mr-2">🍼</span>}
+              {edad === "12 a 23 meses" && <span class="mr-2">🧒</span>}
+              {edad}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Hero Section Rediseñada -->
+    <section class="relative text-center pt-16 pb-24 bg-gradient-to-br from-amber-50 to-orange-50">
+      <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMTQ2LDAsMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto">
+     
+        
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">
+            Recetas Contra la Anemia
+          </span>
+        </h1>
+        
+        <p class="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
+          Descubre menús ricos en hierro diseñados para cada etapa de desarrollo infantil
+        </p>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0 h-16 bg-white clip-path-wave"></div>
+    </section>
+
+    <!-- Sección por grupos de edad -->
+    {
+      Object.entries(gruposEdad).map(([edad, recetas]) => (
+        <section id={edad.replace(/\s+/g, "-")} class="mb-20 scroll-mt-16">
+          <!-- Encabezado rediseñado -->
+          <div class="flex items-start mb-10 p-5 bg-white rounded-2xl shadow-md border-l-4 border-amber-400 text">
+            <div class="mr-5 p-3 rounded-xl bg-gradient-to-br from-amber-400 to-orange-400 text-white shadow-sm">
+              <span class="text-3xl block">
+                {edad === "6 a 8 meses" && "👶"}
+                {edad === "9 a 11 meses" && "🍼"}
+                {edad === "12 a 23 meses" && "🧒"}
+              </span>
+            </div>
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-1.5">
+                Recetas para {edad}
+              </h2>
+              <p class="text-gray-600 max-w-2xl">
+                {edad === "6 a 8 meses" && "Introducción a sólidos con purés ricos en hierro y texturas suaves"}
+                {edad === "9 a 11 meses" && "Alimentos con más textura para estimular la masticación"}
+                {edad === "12 a 23 meses" && "Dieta variada que incluye alimentos de la familia"}
+              </p>
+            </div>
+          </div>
+
+          {recetas.length > 0 ? (
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {recetas.map((receta) => (
+                <article
+                  class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transitio duration-300 
+                        border border-gray-100 hover:border-amber-300 flex flex-col h-full transform hover:-translate-y-2 transition-transform"
+                >
+                  {/* Imagen con overlay mejorado */}
+                  <div class="relative aspect-[5/4] overflow-hidden group">
+                    <img
+                      src={receta.imagen}
+                      alt={receta.titulo}
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                    <span class="absolute top-4 right-4 bg-white/90 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center backdrop-blur-sm">
+                      ⏱️ <span class="ml-1">{receta.tiempo}</span>
+                    </span>
+                    <span class="absolute bottom-4 left-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                      {receta.edad === "6-8" ? "6-8 meses" : 
+                       receta.edad === "9-11" ? "9-11 meses" : "1-2 años"}
+                    </span>
+                  </div>
+
+                  {/* Contenido rediseñado */}
+                  <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                      <h3 class="text-xl font-bold text-gray-900 leading-snug">
+                        {receta.titulo}
+                      </h3>
+                      <span class="text-xs text-gray-600 bg-gray-50 px-2.5 py-1 rounded-full flex items-center shadow-inner">
+                        🍽️ <span class="ml-1">{receta.porciones}</span>
+                      </span>
+                    </div>
+
+                    <p class="text-gray-600 text-sm mb-5 line-clamp-3 flex-grow">
+                      {receta.descripcion}
+                    </p>
+
+                    {/* Nutrientes destacados */}
+                    <div class="mb-5">
+                      <h4 class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider flex items-center">
+                        <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Nutrientes Clave
+                      </h4>
+                      <div class="flex flex-wrap gap-2">
+                        {receta.nutrientes?.map((nutriente) => (
+                          <span class="text-xs px-3 py-1 rounded-full bg-amber-50/80 text-amber-700 border border-amber-100 hover:bg-amber-100 transition-colors">
+                            {nutriente}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <a
+                      href={`/recetas/${receta.id}`}
+                      class="mt-auto text-sm font-medium inline-flex items-center justify-center
+                          text-white bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 transition-all
+                          group px-5 py-3 rounded-xl hover:shadow-md w-full text-center"
+                    >
+                      Ver receta completa
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div class="bg-amber-50 rounded-2xl p-10 text-center border-2 border-amber-200 border-dashed">
+              <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <span class="text-3xl">🍲</span>
+              </div>
+              <h3 class="text-xl font-medium text-gray-900">
+                Próximamente más recetas
+              </h3>
+              <p class="text-gray-600 mt-3 max-w-md mx-auto">
+                Estamos desarrollando nuevas recetas especialmente diseñadas para este grupo de edad.
+              </p>
+              <a href="#contacto" class="mt-5 inline-flex items-center text-sm font-medium text-amber-600 hover:text-amber-700 hover:underline">
+                ¿Tienes alguna sugerencia?
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          )}
+        </section>
+      ))
+    }
+
+    <!-- Sección de consejos rediseñada -->
+    <section class="mt-20 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-10 shadow-inner">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Combatiendo la <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Anemia Infantil</span>
+        </h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          Recomendaciones basadas en las últimas guías de nutrición pediátrica
+        </p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Consejo 1 -->
+        <div class="group bg-white p-7 rounded-2xl shadow-sm border border-amber-100 hover:shadow-lg transition-all duration-300 hover:border-amber-300">
+          <div class="bg-gradient-to-br from-amber-400 to-orange-400 w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white shadow-sm group-hover:rotate-6 transition-transform">
+            <span class="text-3xl">🥩</span>
+          </div>
+          <h3 class="font-bold text-xl text-gray-900 mb-3">Fuentes de Hierro</h3>
+          <p class="text-gray-600">
+            Incluye carnes rojas magras, hígado (1-2 veces por semana) y pescado oscuro. Para vegetarianos: lentejas, espinacas y cereales fortificados.
+          </p>
+        </div>
+        
+        <!-- Consejo 2 -->
+        <div class="group bg-white p-7 rounded-2xl shadow-sm border border-orange-100 hover:shadow-lg transition-all duration-300 hover:border-orange-300">
+          <div class="bg-gradient-to-br from-orange-400 to-red-400 w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white shadow-sm group-hover:rotate-6 transition-transform">
+            <span class="text-3xl">🍊</span>
+          </div>
+          <h3 class="font-bold text-xl text-gray-900 mb-3">Mejora la Absorción</h3>
+          <p class="text-gray-600">
+            Combina alimentos con hierro no hemínico (vegetales) con vitamina C (cítricos, pimientos, fresas) para aumentar su absorción hasta 3 veces.
+          </p>
+        </div>
+        
+        <!-- Consejo 3 -->
+        <div class="group bg-white p-7 rounded-2xl shadow-sm border border-amber-100 hover:shadow-lg transition-all duration-300 hover:border-amber-300">
+          <div class="bg-gradient-to-br from-amber-500 to-orange-500 w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white shadow-sm group-hover:rotate-6 transition-transform">
+            <span class="text-3xl">👩‍⚕️</span>
+          </div>
+          <h3 class="font-bold text-xl text-gray-900 mb-3">Prevención</h3>
+          <p class="text-gray-600">
+            Realiza controles de hemoglobina según recomendación médica. La anemia en niños puede afectar su desarrollo cognitivo y motor.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Banner adicional -->
+      <div class="mt-12 bg-gradient-to-r from-amber-200 to-orange-200 rounded-2xl p-6 text-center border border-amber-300 shadow-inner">
+        <p class="text-amber-900 font-medium text-lg">
+          <span class="text-2xl mr-3">📌</span> La lactancia materna exclusiva hasta los 6 meses es la primera defensa contra la anemia infantil.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Sección de suscripción rediseñada -->
+
+  </main>
+
+  <style>
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .clip-path-wave {
+      clip-path: ellipse(75% 100% at center top);
+    }
+  </style>
+
+  <script is:inline>
+    // Actualizar selector activo al hacer scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const ageGroups = Object.keys(gruposEdad);
+      const links = document.querySelectorAll('[href^="#"]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            links.forEach(link => {
+              link.setAttribute('data-active', 
+                link.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, {threshold: 0.5});
+      
+      ageGroups.forEach(age => {
+        const section = document.getElementById(age.replace(/\s+/g, "-"));
+        if (section) observer.observe(section);
+      });
+    });
+  </script>
+</Layout>
